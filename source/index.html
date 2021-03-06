@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>signin/signup</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+    <title>Login or Register Account </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+ 
+</head>
+
+<body>
+
+    <div class="container" id="div1">
+        <div class="tab">
+            <div class="tablinks" id="logintab" data-form-id="login">Login</div>
+            <div class="tablinks" id="signuptab" data-form-id="signup">Sign up</div>
+        </div>
+        <div class="tabcontent" id="login">
+            <form name="formlogin" action = "login.php" onsubmit = "return validation()" method = "POST">
+                <label for="loginEmail">Email:</label>
+                <input required type="email" id="loginemail" name ="loginemail"placeholder="you@domain.com" />
+                <label for="loginPassword">Password:</label>
+                <input required type="password" id="loginpassword" name="loginpassword" placeholder="**********" />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="tabcontent" id="signup">
+            <form name="formsignup" action = "signup.php" onsubmit = "return validationSignup()" method = "POST">
+                <label for="username">Name:</label>
+                <input required type="text" id="username" name="username" placeholder="username" />
+                <label for="signupemail">Email:</label>
+                <input required type="email" id="signupemail" name="signupemail" placeholder="you@domain.com" />
+                <label for="signuppassword">Password:</label>
+                <input required type="password" id="signuppassword" name="signuppassword" placeholder="**********" />
+                
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+      
+       function validation()  
+            {  
+                var id=document.div1.login.formlogin.loginemail.value;  
+                var ps=document.div1.login.formlogin.loginpassword.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }
+
+       function validationSignup()  
+            {  
+                var sun=document.div1.signup.formsignup.username.value;
+                var sid=document.div1.signup.formsignup.signupemail.value;  
+                var sps=document.div1.aignup.formsignup.signuppassword.value;  
+                if(sid.length=="" && sps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(sid.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (sps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }
+                    if (sun.length=="") {  
+                    alert("username field is empty");  
+                    return false;  
+                    }  
+                }                             
+            } 
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assetsco/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assetsco/css/styles.css">
+</head>
+
+<body style="height: 100vh;">
+    <nav class="navbar navbar-light navbar-expand-md" style="font-family: 'Poiret One', cursive;">
+        <div class="container-fluid"><a class="navbar-brand" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" href="homepage.html" style="margin: 48px;font-size: 43px;color: rgba(0,0,0,0.9);">colKart</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 50px;"><a class="nav-link" href="shop-all.html" style="color: rgb(0,0,0);font-size: 17px;">Products</a></li>
+                    <li class="nav-item" style="margin-right: 50px;"><a class="nav-link" href="about.html" style="color: rgb(0,0,0);font-size: 17px;">About</a></li>
+                    <li class="nav-item" style="margin-right: 50px;"><a class="nav-link" href="contact.html" style="color: rgb(0,0,0);font-size: 17px;">Contact Us</a></li>
+                    <li class="nav-item" style="margin-right: 20px;"><a class="nav-link" href="index.html" style="border-color: rgba(0,0,0,0);color: rgb(0,0,0);font-size: 17px;">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form name="formcout"  onsubmit = "return validationCout()" method = "POST" action="cout.php">
+        <div id="div1">
+            <h1 style="font-family: 'Poiret One', cursive;background: rgb(0,0,0);font-size: 45px;color: rgb(255,255,255);">Credit/Debit card details</h1>
+            <div id="div2">
+                <h1 style="font-family: 'Poiret One', cursive;font-size: 29px;margin-top: 32px;margin-left: 100px;">Card Number</h1>
+                <div id="div3" class="d-flex" style="font-family: 'Josefin Sans', sans-serif;">
+                    <input id="first" name="first" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 236px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="4" autocomplete="off" placeholder="●●●●">
+                    <input id="second" name="second" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 10px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="4" autocomplete="off" placeholder="●●●●">
+                    <input id="third" name="third" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 10px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="4" autocomplete="off" placeholder="●●●●">
+                    <input id="fourth" name="fourth" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 10px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="4" autocomplete="off" placeholder="●●●●">
+                </div>
+            </div>
+            <div id="div3">
+                <h1 style="font-family: 'Poiret One', cursive;font-size: 29px;margin-top: 32px;margin-left: 100px;">Name</h1>
+                <div id="div4" class="d-flex" style="font-family: 'Josefin Sans', sans-serif;">
+                    <input id="name" name="name" class="form-control form-control-sm" type="text" style="margin-left: 236px;text-align: left;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;color: rgb(0,0,0);width: 367px;font-family: 'Josefin Sans', sans-serif;" max="4" autocomplete="off" placeholder="Name on the card">
+                </div>
+            </div>
+            <div id="div5">
+                <h1 style="font-family: 'Poiret One', cursive;font-size: 29px;margin-top: 32px;margin-left: 100px;">Expiry Date</h1>
+                <div id="div6" class="d-flex" style="font-family: 'Josefin Sans', sans-serif;">
+                    <input id="expiry" name="expiry" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 236px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="2" autocomplete="off" placeholder="12">
+                    <input id="year" name="year" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 10px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="4" autocomplete="off" placeholder="2020">
+                </div>
+            </div>
+            <div id="div7">
+                <h1 style="font-family: 'Poiret One', cursive;font-size: 29px;margin-top: 32px;margin-left: 100px;">CVV</h1>
+                <div id="div8" class="d-flex">
+                    <input id="csv" name="csv" class="form-control form-control-sm" type="text" style="width: 83px;margin-left: 236px;text-align: center;border-top-style: none;border-right-style: none;border-bottom-color: rgba(0,0,0,0.14);border-left-style: none;font-family: 'Josefin Sans', sans-serif;" max="4" maxlength="3" autocomplete="off" placeholder="***">
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" style="margin-left: 236px;margin-top: 53px;border-top-style: none;border-top-color: rgb(0,0,0);border-right-style: none;border-right-color: rgb(0,0,0);border-bottom-style: none;border-bottom-color: rgb(0,0,0);border-left-style: none;border-left-color: rgb(0,0,0);background: rgb(0,0,0);width: 154px;height: 49px;font-family: 'Poiret One', cursive;font-size: 17px;">
+        </div>
+    </form>
+    <script src="assetsco/js/jquery.min.js"></script>
+    <script src="assetsco/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assetsco/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    function validationCout()  
+            {  
+                var cfirst=document.getElementById("first").value;
+                var csecond=document.getElementById("second").value;
+                var cthird=document.getElementById("third").value;
+                var cfourth=document.getElementById("fourth").value;
+
+                var cname=document.getElementById("name").value;
+
+                var cmonth=document.getElementById("expiry").value;
+                var cyear=document.getElementById("year").value;
+
+                var ccsv=document.getElementById("csv").value;
+
+
+ 
+
+                  
+                if(cfirst.length=="") {  
+                    alert("Valid account number is required");  
+                    return false;  
+                }   
+                if(csecond.length=="") {  
+                    alert("Valid account number is required");  
+                    return false;  
+                }  
+                if(cthird.length=="") {  
+                    alert("Valid account number is required");  
+                    return false;  
+                }  
+                if(cfourth.length=="") {  
+                    alert("Valid account number is required");  
+                    return false;  
+                }  
+
+
+                if (cname.length=="") {  
+                alert("Enter name on card");  
+                return false;  
+                }
+
+                if (cmonth.length=="") {  
+                alert("Enter expiry date on card");  
+                return false;  
+                }  
+                if (cyear.length=="") {  
+                alert("Enter expiry date on card");  
+                return false;  
+                }  
+
+                if (ccsv.length=="") {  
+                alert("Enter csv on card");  
+                return false;  
+                }  
+                                            
+            }
+
+  </script>
+
+</body>
+
+</html>

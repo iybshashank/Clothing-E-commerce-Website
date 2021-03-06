@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #222;
+}
+
+.products-container {
+  display: flex;
+}
+
+.container {
+  padding: 4rem 5rem !important;
+}
+
+.shop-item {
+  width: calc(100% / 4);
+  margin: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.shop-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quickview {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  padding-bottom: 2rem;
+  color: #222;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all ease-in-out 250ms;
+  font-family: 'Raleway', sans-serif;
+}
+
+.quickview:hover {
+  opacity: 1;
+}
+
+.quickview__icon {
+  font-size: 1rem;
+  background-color: rgba(204, 204, 204, 0.9);
+  padding: 0.7rem 1rem;
+  align-self: center;
+  color: black;
+}
+
+.quickview__info {
+  font-size: 1.2rem;
+  align-self: center;
+  text-align: center;
+}
+
+.quickview__info--price {
+  font-size: 1rem;
+  color: rgba(61, 61, 61, 0.6);
+}
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(245, 239, 236, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 250ms;
+}
+
+.popup__img {
+  height: 100%;
+}
+
+.popup__close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  color: #d1d1d1;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+}
+
+.popup__close-icon:hover {
+  color: rgba(61, 61, 61, 0.6);
+}
+
+.popup__close-icon-clothing {
+  position: absolute;
+  font-size: 3.6rem;
+  font-weight: lighter;
+  color: #222;
+  top: -1rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(240, 240, 240, 0.6);
+}
+
+.popup-item {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.product-info {
+  padding: 20rem 15rem;
+  letter-spacing: 0.1rem;
+  color: black;
+  float: right;
+}
+
+.product-info--shop {
+  padding: 0 3.5rem;
+}
+
+.product-info__price {
+  font-size: 2.4rem;
+  margin: 3rem 0;
+  display: block;
+  color: black;
+}
+
+.product-info__text {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.detail-group {
+  color: #222;
+  margin-bottom: 4rem;
+}
+
+.detail-group__span {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.detail-group__size {
+  width: 12.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  padding: 1.1rem 2rem;
+  margin-top: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  background: url(../img/down-arrow.png) 85%/7% no-repeat #f8f8f8;
+}
+
+.detail-group__quantity {
+  width: 7.5rem;
+  padding: 1.1rem 1.6rem;
+  margin-top: 0.5rem;
+  outline: none;
+  border: 0;
+  background-color: #f8f8f8;
+}
+
+.clothing-item-flex {
+  height: 100%;
+  background-color: #fff;
+  display: inline-flex;
+}
+
+.clothing-item-flex__img-wrapper {
+  min-width: 60%;
+  margin: 1.5rem;
+  overflow: hidden;
+}
+
+.clothing-item-flex__img-wrapper--no-margin {
+  margin: 0;
+}
+
+.clothing-item-flex__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: left;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1.2rem 2.6rem;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:hover {
+  color: #222;
+  background-color: #fff;
+}
+
+.btn--form {
+  color: #222;
+  border: 2px solid black;
+  font-weight: 400;
+  padding: 1.4rem 3.5rem;
+  cursor: pointer;
+}
+
+.btn--form:hover {
+  color: #fff;
+  background-color: #222;
+}
+
+.btn--form--shop {
+  padding: 2.3rem 3.4rem;
+}
+
